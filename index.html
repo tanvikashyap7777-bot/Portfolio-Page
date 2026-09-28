@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanvi Kashyap | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background: #f7f9fc;
+            color: #222;
+        }
+
+        header {
+            background: #111827;
+            color: white;
+            padding: 20px 8%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #60a5fa;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: #2563eb;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: auto;
+            color: #555;
+            font-size: 17px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        .about {
+            max-width: 850px;
+            margin: auto;
+            text-align: center;
+            color: #555;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+            font-weight: bold;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            color: #2563eb;
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        .education,
+        .experience {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .timeline-card {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2563eb;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+            border-radius: 8px;
+        }
+
+        .timeline-card h3 {
+            color: #111827;
+        }
+
+        .timeline-card p {
+            color: #666;
+        }
+
+        .contact {
+            text-align: center;
+            background: #111827;
+            color: white;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact p {
+            margin-bottom: 20px;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            color: white;
+            text-decoration: none;
+            border: 1px solid #60a5fa;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        .social-links a:hover {
+            background: #2563eb;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #030712;
+            color: #aaa;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero h2 {
+                font-size: 20px;
+            }
+
+            section {
+                padding: 55px 5%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Tanvi Kashyap</div>
+
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Hi, I'm Tanvi Kashyap</h1>
+            <h2>BCA Student & Aspiring Developer</h2>
+
+            <p>
+                I am a Computer Applications student interested in
+                web development and mobile application development.
+                I enjoy learning new technologies and building practical projects.
+            </p>
+
+            <a href="#projects" class="btn">View My Projects</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about">
+            <p>
+                I am currently pursuing a Bachelor of Computer Applications (BCA).
+                My interests include web development and mobile application development.
+                I am continuously improving my programming and problem-solving skills through 
+                academic learning and personal projects.
+            </p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">My Skills</h2>
+
+        <div class="skills">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Java</div>
+            <div class="skill">PHP</div>
+            <div class="skill">MySQL</div>
+            <div class="skill">ReactJS</div>
+            <div class="skill">Git & GitHub</div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project-card">
+                <h3>Daily Habit Tracker</h3>
+                <p>
+                    A project designed to help users track and maintain
+                    their daily habits and routines.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Namaste Hindi</h3>
+                <p>
+                    A Hindi learning application designed to help beginners
+                    learn Hindi through lessons and practice.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>JavaBuddy</h3>
+                <p>
+                    A learning application focused on teaching Java concepts
+                    from beginner to advanced levels.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>PHP Mentor</h3>
+                <p>
+                    An educational application created to help learners
+                    understand PHP concepts and programming fundamentals.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Wordspaces</h3>
+                <p>
+                    A word-based game concept in dual languages designed for
+                    interactive learning and entertainment.
+                </p>
+            </div>
+
+            <div class="project-card">
+                <h3>Smart Campus Hub</h3>
+                <p>
+                    A student-focused web application containing features
+                    such as notes sharing, CGPA calculation and attendance.
+            
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+
+        <div class="education">
+
+            <div class="timeline-card">
+                <h3>Bachelor of Computer Applications (BCA)</h3>
+                <p>
+                    Currently pursuing BCA with a focus on computer applications,
+                    programming, web technologies, and software development.
+                </p>
+            </div>
+
+            <div class="timeline-card">
+                <h3>Higher Secondary Education</h3>
+                <p>
+                    Polestar, Madhubani | 2019– 2020
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Let's Connect</h2>
+
+        <p>
+            Interested in connecting with me or discussing opportunities?
+        </p>
+
+        <div class="social-links">
+
+            <a href="https://github.com/tanvikashyap7777-bot" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://www.linkedin.com/in/tanvi-kashyap-0608b1419" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://leetcode.com/u/tanvi_kashyap77" target="_blank">
+                LeetCode
+            </a>
+
+            <a href="mailto:tanvikashyap7777@gmail.com">
+                Email
+            </a>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 Tanvi Kashyap. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
